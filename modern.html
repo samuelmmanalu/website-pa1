@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Ulos Modern - Informasi Ulos</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- JS Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff5f4 100%);
+            color: #333333;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(to right, #ff8680, #e6736d);
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 62px;
+            border-radius: 0;
+            margin-bottom: 25px;
+        }
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: white !important;
+            padding: 15px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand i {
+            margin-right: 8px;
+            font-size: 24px;
+        }
+        .navbar-nav > li > a {
+            color: white !important;
+            font-weight: 500;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .navbar-nav > li > a:hover, 
+        .navbar-nav > li > a:focus {
+            background-color: rgba(255, 255, 255, 0.15) !important;
+        }
+        .accent-line {
+            height: 3px;
+            background: linear-gradient(to right, #ffd6d4, #ff8680, #e6736d, #ffd6d4);
+            width: 100%;
+        }
+
+        /* Animation & Scrollbar */
+        .page-load-animation { animation: gentleFadeIn 1.2s ease-out both; }
+        @keyframes gentleFadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .product-card {
+            position: relative;
+            border: none;
+            box-shadow: 0 3px 35px rgba(255, 134, 128, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            height: 100%;
+            border: 1px solid #f5f5f5;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(255, 134, 128, 0.15);
+            border-color: #ffeae9;
+        }
+        .product-card:hover img { transform: scale(1.07); }
+
+        .btn-elegant {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #ff8680;
+            font-weight: 500;
+            padding: 8px 0;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            border: none;
+            text-decoration: none;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-elegant:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #ff8680;
+            transition: width 0.3s ease;
+        }
+        .btn-elegant:hover { color: #e6736d; text-decoration: none; }
+        .btn-elegant:hover:after { width: 100%; }
+        .btn-elegant:hover i { transform: translateX(4px); }
+
+        .btn-elegant-search {
+            background: #f8f8f8;
+            color: #777;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-elegant-search:hover { color: #ff8680; background: #f3f3f3; }
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .animated {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fas fa-gem"></i> Informasi Ulos</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="modern.html"><i class="fas fa-tshirt"></i> Modern</a></li>
+                    <li><a href="tradisional.html"><i class="fas fa-scroll"></i> Tradisional</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="accent-line"></div>
+
+    <!-- Main Container -->
+    <div class="container page-load-animation" style="max-width: 1200px;">
+
+        <!-- Accent Stripe -->
+        <div style="height: 5px; background: linear-gradient(to right, #ff8680, #e6736d, #ffd6d4); margin-bottom: 40px; border-radius: 50px;"></div>
+
+        <!-- Page Header -->
+        <div class="page-header" style="margin: 40px 0 40px; position: relative; text-align: center;">
+            <h2 style="font-weight: 500; color: #333333; margin: 0; padding-bottom: 15px; display: inline-block; letter-spacing: 1.2px; position: relative; font-family: 'Playfair Display', serif;">
+                <span style="background: transparent; padding: 0 25px; position: relative; z-index: 2;">Koleksi Ulos Modern</span>
+                <span style="content: ''; position: absolute; bottom: 15px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #ff8680, transparent); z-index: 1;"></span>
+            </h2>
+            <p style="color: #555555; margin-top: 18px; font-size: 16px; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.7; font-weight: 300; font-family: 'Montserrat', sans-serif;">
+                Eksplorasi interpretasi kontemporer dari Ulos, menggabungkan desain tradisional dengan sentuhan modern.
+            </p>
+        </div>
+
+        <!-- Static Search Bar -->
+        <div class="row" style="margin-bottom: 60px;">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="input-group" style="box-shadow: 0 5px 25px rgba(255, 134, 128, 0.1); border-radius: 30px; overflow: hidden; border: 1px solid #ffeae9;">
+                    <input type="text" class="form-control" placeholder="Cari produk ulos modern..." style="border: none; padding: 20px 25px; font-size: 14px; height: auto; background: #fcfcfc;">
+                    <span class="input-group-btn">
+                        <button class="btn btn-elegant-search" type="button" style="border-radius: 0 30px 30px 0; padding: 20px 30px; border: none;">
+                            <i class="glyphicon glyphicon-search" style="margin-right: 8px;"></i> Cari
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="row">
+            
+            <!-- Produk 1 -->
+            <div class="col-sm-6 col-md-4 animate-fade-up" style="padding: 15px; margin-bottom: 20px;">
+                <div class="product-card">
+                    <div style="position: absolute; top: 15px; left: 15px; z-index: 10;">
+                        <span style="font-size: 10px; font-weight: 600; padding: 5px 14px; background: linear-gradient(to right, #ff8680, #e6736d); color: #fff; border-radius: 30px; letter-spacing: 1px; text-transform: uppercase;">
+                            Modern
+                        </span>
+                    </div>
+                    <div style="width: 100%; height: 250px; overflow: hidden; position: relative;">
+                        <img src="slebew2.jpg" alt="Dress Ulos Modern" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s ease;">
+                    </div>
+                    <div style="padding: 28px;">
+                        <h4 style="font-weight: 500; color: #333; margin-bottom: 14px; font-size: 17px; font-family: 'Playfair Display', serif;">
+                            Dress Ulos Modern Kontemporer
+                        </h4>
+                        <p style="font-size: 14px; color: #666; margin: 15px 0; line-height: 1.6;">
+                            Gaun anggun berpola ulos khas Batak dengan potongan modern yang nyaman dan cocok untuk acara resmi maupun kasual...
+                        </p>
+                        <div style="border-top: 1px solid #ffeae9; padding-top: 20px; margin-top: 5px;">
+                            <a href="detail_produk.html" class="btn-elegant">
+                                <span>Lihat Detail</span>
+                                <i class="glyphicon glyphicon-chevron-right" style="margin-left: 8px; font-size: 12px;"></i>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="col-sm-6 col-md-4 animate-fade-up" style="padding: 15px; margin-bottom: 20px;">
+                <div class="product-card">
+                    <div style="position: absolute; top: 15px; left: 15px; z-index: 10;">
+                        <span style="font-size: 10px; font-weight: 600; padding: 5px 14px; background: linear-gradient(to right, #ff8680, #e6736d); color: #fff; border-radius: 30px; letter-spacing: 1px; text-transform: uppercase;">
+                            Modern
+                        </span>
+                    </div>
+                    <div style="width: 100%; height: 250px; overflow: hidden; position: relative;">
+                        <img src="slebew3.jpg" alt="Outer Ulos Modern" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s ease;">
+                    </div>
+                    <div style="padding: 28px;">
+                        <h4 style="font-weight: 500; color: #333; margin-bottom: 14px; font-size: 17px; font-family: 'Playfair Display', serif;">
+                            Outer Blazer Motif Ulos
+                        </h4>
+                        <p style="font-size: 14px; color: #666; margin: 15px 0; line-height: 1.6;">
+                            Blazer eksklusif berornamen kain tenun Ulos, memadukan fleksibilitas gaya busana kerja dan estetika etnik khas...
+                        </p>
+                        <div style="border-top: 1px solid #ffeae9; padding-top: 20px; margin-top: 5px;">
+                            <a href="detail_produk.html" class="btn-elegant">
+                                <span>Lihat Detail</span>
+                                <i class="glyphicon glyphicon-chevron-right" style="margin-left: 8px; font-size: 12px;"></i>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="col-sm-6 col-md-4 animate-fade-up" style="padding: 15px; margin-bottom: 20px;">
+                <div class="product-card">
+                    <div style="position: absolute; top: 15px; left: 15px; z-index: 10;">
+                        <span style="font-size: 10px; font-weight: 600; padding: 5px 14px; background: linear-gradient(to right, #ff8680, #e6736d); color: #fff; border-radius: 30px; letter-spacing: 1px; text-transform: uppercase;">
+                            Modern
+                        </span>
+                    </div>
+                    <div style="width: 100%; height: 250px; overflow: hidden; position: relative;">
+                        <img src="kain-ulos.jpg" alt="Tunik Ulos Elegance" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s ease;">
+                    </div>
+                    <div style="padding: 28px;">
+                        <h4 style="font-weight: 500; color: #333; margin-bottom: 14px; font-size: 17px; font-family: 'Playfair Display', serif;">
+                            Tunik Ulos Modern
+                        </h4>
+                        <p style="font-size: 14px; color: #666; margin: 15px 0; line-height: 1.6;">
+                            Atasan tunik berbahan premium dengan variasi aksen Ulos pada bagian dada, sangat anggun untuk acara formal pesta...
+                        </p>
+                        <div style="border-top: 1px solid #ffeae9; padding-top: 20px; margin-top: 5px;">
+                            <a href="detail_produk.html" class="btn-elegant">
+                                <span>Lihat Detail</span>
+                                <i class="glyphicon glyphicon-chevron-right" style="margin-left: 8px; font-size: 12px;"></i>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Accent Stripe Bottom -->
+    <div style="height: 5px; background: linear-gradient(to right, #ffd6d4, #e6736d, #ff8680); margin-top: 60px; border-radius: 50px;"></div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+    function checkIfInView() {
+        const elements = document.querySelectorAll('.animate-fade-up');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            if (elementTop < window.innerHeight - 50 && elementBottom >= 0) {
+                element.classList.add('animated');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(checkIfInView, 100);
+        window.addEventListener('scroll', checkIfInView);
+        window.addEventListener('resize', checkIfInView);
+    });
+    </script>
+
+    <!-- Footer -->
+    <footer style="background-color: gray; padding: 15px; margin-top: 40px; color: white;">
+        <h5 class="text-center" style="margin: 0;">Copyright &copy; Kelompok 18</h5>
+    </footer>
+
+</body>
+</html>

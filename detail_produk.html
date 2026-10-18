@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Ulos - Informasi Ulos</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- JS Scripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: linear-gradient(to right, #ff8680, #e6736d);
+      border: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      height: 62px;
+      border-radius: 0;
+      margin-bottom: 25px;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: white !important;
+      padding: 15px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand i {
+      margin-right: 8px;
+      font-size: 24px;
+    }
+    .navbar-nav > li > a {
+      color: white !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    .navbar-nav > li > a:hover, 
+    .navbar-nav > li > a:focus {
+      background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+    .accent-line {
+      height: 3px;
+      background: linear-gradient(to right, #ffd6d4, #ff8680, #e6736d, #ffd6d4);
+      width: 100%;
+    }
+
+    /* Content Layout Styles */
+    .container {
+      max-width: 1200px;
+      padding: 30px 15px;
+    }
+
+    .judul-produk {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .judul-produk::after {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 4px;
+      background: linear-gradient(to right, #ff8680, #ff6b63);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+    }
+
+    .image-container {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-custom {
+      display: block;
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 12px 20px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      background: white;
+      color: #2c3e50;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      border-color: #ff8680;
+      color: #ff8680;
+    }
+
+    .content-section {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #ff8680;
+      border-radius: 8px;
+      transition: all 0.6s ease;
+      transform: translateY(20px);
+      opacity: 0;
+      display: none;
+    }
+
+    .content-section.active {
+      transform: translateY(0);
+      opacity: 1;
+      display: block;
+    }
+
+    /* Modal Styles */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      overflow: auto;
+    }
+
+    .modal-content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .modal-original-image {
+      max-width: 80vw;
+      max-height: 70vh;
+      border: 5px solid white;
+      border-radius: 10px;
+    }
+
+    .close-modal {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+      background-color: #ffc107;
+      color: #212529;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #e0a800;
+      color: #212529;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><i class="fas fa-gem"></i> Informasi Ulos</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="modern.html"><i class="fas fa-tshirt"></i> Modern</a></li>
+          <li><a href="tradisional.html"><i class="fas fa-scroll"></i> Tradisional</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> Tentang Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="accent-line"></div>
+
+  <!-- Main Content Container -->
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="page-load-animation animate-title" style="border-bottom: 4px solid #ff8680"><b>Detail Ulos</b></h2>
+      <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Kembali
+      </a>
+    </div>
+
+    <div class="row">
+      <!-- Left Column: Product Image & Menu Buttons -->
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="image/kain-ulos.jpg" alt="Detail Ulos" class="img-responsive thumbnail-image" onclick="openImageModal('image/kain-ulos.jpg')">
+        </div>
+        <p class="text-center mt-2" style="color: #666; font-style: italic;">
+          <i class="fas fa-info-circle" style="color: #ff8680;"></i> Klik gambar untuk melihat ukuran dan detail
+        </p>
+
+        <div style="margin-top: 10px;">
+          <button type="button" class="btn btn-sm btn-outline-primary btn-custom" onclick="showContent('deskripsi')">Deskripsi</button>
+          <button type="button" class="btn btn-sm btn-outline-danger btn-custom" onclick="showContent('sejarah')">Sejarah</button>
+          <button type="button" class="btn btn-sm btn-outline-success btn-custom" onclick="showContent('detail')">Detail</button>
+          <button type="button" class="btn btn-sm btn-outline-warning btn-custom" onclick="showContent('bahan')">Bahan</button>
+          <button type="button" class="btn btn-sm btn-outline-warning btn-custom" onclick="showContent('alat')">Alat</button>
+          <button type="button" class="btn btn-sm btn-outline-info btn-custom" onclick="showContent('cara_pembuatan')">Cara Pembuatan</button>
+        </div>
+      </div>
+
+      <!-- Right Column: Tab Content Display -->
+      <div class="col-md-8">
+        <div class="product-details">
+          <h3 class="judul-produk">Ulos Batak Tradisional</h3>
+
+          <!-- Deskripsi Section -->
+          <div id="deskripsiContent" class="content-section active">
+            <p>Ulos adalah salah satu busana adat khas suku Batak, Sumatera Utara. Kain ulos memiliki nilai budaya yang sangat tinggi dan dibuat secara tradisional menggunakan alat tenun bukan mesin (ATBM).</p>
+          </div>
+          
+          <!-- Detail Section -->
+          <div id="detailContent" class="content-section">
+            <h4>Detail Ulos</h4>
+            <p>Berikut detail lengkap dari ulos ini:</p>
+            <ul>
+              <li><strong>Panjang:</strong> 200 cm</li>
+              <li><strong>Lebar:</strong> 90 cm</li>
+              <li><strong>Motif:</strong> Motif Tradisional Khas Batak</li>
+            </ul>
+          </div>
+          
+          <!-- Cara Pembuatan Section -->
+          <div id="cara_pembuatanContent" class="content-section">
+            <h4>Cara Pembuatan</h4>
+            <p>Pembuatan Ulos memerlukan ketelitian dan kesabaran melalui beberapa tahapan:</p>
+            <ol>
+              <li>Persiapan bahan benang katun/sutra.</li>
+              <li>Pewarnaan benang menggunakan pewarna alami atau sintetis.</li>
+              <li>Proses penenunan benang menggunakan alat tenun tradisional.</li>
+            </ol>
+          </div>
+          
+          <!-- Alat Section -->
+          <div id="alatContent" class="content-section">
+            <h4>Alat</h4>
+            <p>Alat-alat yang digunakan dalam pembuatan ulos antara lain alat tenun tradisional (sorha, sisir tenun, dan pakan).</p>
+          </div>
+          
+          <!-- Bahan Section -->
+          <div id="bahanContent" class="content-section">
+            <h4>Bahan</h4>
+            <p>Bahan utama yang digunakan meliputi benang katun pilihan dan pewarna kain khas.</p>
+          </div>
+          
+          <!-- Sejarah Section -->
+          <div id="sejarahContent" class="content-section">
+            <h4>Sejarah</h4>
+            <p>Secara turun-temurun, ulos dikembangkan oleh masyarakat Batak sebagai simbol hangat, kasih sayang, serta restu dalam berbagai upacara adat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image Modal View -->
+  <div id="imageModal" class="image-modal">
+    <span class="close-modal" onclick="closeImageModal()">&times;</span>
+    <div class="modal-content-wrapper">
+      <div class="modal-image-container">
+        <img class="modal-original-image" id="modalImage">
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Logics -->
+  <script>
+    function showContent(type) {
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+        section.classList.remove('active');
+      });
+
+      const selectedContent = document.getElementById(type + 'Content');
+      if (selectedContent) {
+        selectedContent.style.display = 'block';
+        setTimeout(() => {
+          selectedContent.classList.add('active');
+        }, 10);
+      }
+    }
+
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modal.style.display = 'block';
+      modalImg.src = imageSrc;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal() {
+      document.getElementById('imageModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('imageModal');
+      if (event.target == modal) {
+        closeImageModal();
+      }
+    };
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeImageModal();
+      }
+    });
+  </script>
+
+  <!-- Footer Section -->
+  <footer style="background-color: gray; padding: 15px; margin-top: 40px; color: white;">
+    <h5 class="text-center" style="margin: 0;">Copyright &copy; Kelompok 18</h5>
+  </footer>
+
+</body>
+</html>
