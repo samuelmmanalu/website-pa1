@@ -1,0 +1,418 @@
+<?php 
+include 'header.php';
+?>
+
+<div class="container about-page" style="padding-bottom: 100px; font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 1200px;">
+    <!-- Hero Section -->
+    <div class="about-hero animate-fade-up" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hai.webp'); background-size: cover; background-position: center; color: white; padding: 150px 0; margin-bottom: 80px; border-radius: 8px;">
+        <div class="container text-center">
+            <h1 style="font-size: 4.5rem; font-weight: 800; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); line-height: 1.2; letter-spacing: 1px; margin-bottom: 30px;">TENTANG KAMI</h1>
+            <p style="font-size: 2.2rem; max-width: 800px; margin: 0 auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); line-height: 1.6; font-weight: 400;">Pelestari Budaya Ulos Tradisional & Inovator Ulos Modern</p>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="about-content animate-fade" style="margin-bottom: 80px;">
+        <div class="row align-items-center">
+            <div class="col-md-6 animate-fade-left">
+                <h2 style="color: #ff8680; font-size: 3.2rem; font-weight: 700; margin-bottom: 30px;">Siapa Kami?</h2>
+                <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 30px;">
+                    Kami adalah komunitas yang berdedikasi untuk melestarikan dan mengembangkan warisan budaya Ulos Batak. Dengan menghormati tradisi leluhur dan merangkul inovasi modern, kami hadir sebagai jembatan antara generasi.
+                </p>
+                <p style="font-size: 1.8rem; line-height: 1.8; color: #555;">
+                    Website ini menjadi platform edukasi tentang kekayaan makna Ulos tradisional sekaligus showcase perkembangan Ulos kontemporer dalam dunia fashion modern.
+                </p>
+            </div>
+            <div class="col-md-6 animate-fade-right">
+                <img src="wew.jpg" alt="About Ulos" style="width: 100%; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="comparison-section animate-fade-up" style="margin-bottom: 80px;">
+        <h2 style="color: #ff8680; font-size: 3.5rem; font-weight: 600; text-align: center; margin-bottom: 60px; position: relative;">
+            <span style="background: white; padding: 0 20px; position: relative; z-index: 1;">ULOS TRADISIONAL vs MODERN</span>
+            <span style="position: absolute; bottom: 15px; left: 0; right: 0; height: 3px; background: #ff8680; z-index: 0;"></span>
+        </h2>
+        
+        <div class="row">
+            <div class="col-md-6 animate-fade-left">
+                <div class="comparison-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 50px; height: 100%; border-top: 5px solid #5cb85c;">
+                    <h3 style="color: #5cb85c; font-size: 2.8rem; font-weight: 700; margin-top: 0; margin-bottom: 30px;">ULOS TRADISIONAL</h3>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Makna Budaya</h4>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555;">Ulos tradisional adalah manifestasi nyata dari filosofi hidup orang Batak. Setiap jenis Ulos seperti Ragidup, Sibolang, atau Bintang Maratur memiliki fungsi dan makna khusus dalam siklus kehidupan.</p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Proses Pembuatan</h4>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555;">Ditenun secara manual menggunakan alat tenun tradisional (gedogan) dengan teknik turun-temurun. Menggunakan bahan katun atau sutera alami dengan pewarna dari tumbuhan.</p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Ciri Khas</h4>
+                        <ul style="font-size: 1.8rem; line-height: 1.8; color: #555; padding-left: 30px;">
+                            <li>Motif geometris simbolik</li>
+                            <li>Warna alam dari pewarna alami</li>
+                            <li>Tekstur lebih berat dan tebal</li>
+                            <li>Waktu pembuatan lama (minggu-bulan)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Fungsi Adat</h4>
+                        <ul style="font-size: 1.8rem; line-height: 1.8; color: #555; padding-left: 30px;">
+                            <li>Symbol penghormatan dalam acara adat</li>
+                            <li>Media penyampaian berkat (ulos pansamot)</li>
+                            <li>Penanda status sosial dan marga</li>
+                            <li>Bagian dari ritual penting kehidupan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 animate-fade-right">
+                <div class="comparison-card" style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 50px; height: 100%; border-top: 5px solid #ff8680;">
+                    <h3 style="color: #ff8680; font-size: 2.8rem; font-weight: 700; margin-top: 0; margin-bottom: 30px;">ULOS MODERN</h3>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Adaptasi Zaman</h4>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555;">Ulos modern mempertahankan nilai-nilai dasar budaya Batak dalam bentuk yang lebih kontemporer. Tetap menghormati makna tradisional dengan interpretasi yang relevan untuk kehidupan modern.</p>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Inovasi</h4>
+                        <ul style="font-size: 1.8rem; line-height: 1.8; color: #555; padding-left: 30px;">
+                            <li>Menggunakan mesin tenun modern</li>
+                            <li>Variasi warna lebih luas dan cerah</li>
+                            <li>Bahan lebih ringan (rayon, polyester)</li>
+                            <li>Waktu produksi lebih singkat</li>
+                        </ul>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Keunggulan</h4>
+                        <ul style="font-size: 1.8rem; line-height: 1.8; color: #555; padding-left: 30px;">
+                            <li>Lebih praktis untuk sehari-hari</li>
+                            <li>Harga lebih terjangkau</li>
+                            <li>Perawatan lebih mudah</li>
+                            <li>Tetap mempertahankan motif tradisional</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 2rem; color: #333; margin-bottom: 15px;">✧ Fungsi Kontemporer</h4>
+                        <ul style="font-size: 1.8rem; line-height: 1.8; color: #555; padding-left: 30px;">
+                            <li>Busana sehari-hari dan fashion modern</li>
+                            <li>Aksesoris dan dekorasi interior</li>
+                            <li>Media ekspresi kreatif generasi muda</li>
+                            <li>Pengenalan budaya Batak ke khalayak luas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Harmony Section -->
+    <div class="harmony-section animate-fade-up" style="background: #f9f9f9; padding: 60px; border-radius: 8px; margin-bottom: 60px;">
+        <h2 style="color: #333; font-size: 3.2rem; font-weight: 700; text-align: center; margin-bottom: 50px;">HARMONI TRADISI & MODERNITAS</h2>
+        <div class="row">
+            <div class="col-md-6 animate-fade-left">
+                <div style="margin-bottom: 40px;">
+                    <h3 style="font-size: 2.2rem; color: #ff8680; margin-bottom: 20px;">⋆ Nilai Inti yang Tak Berubah</h3>
+                    <p style="font-size: 1.8rem; line-height: 1.9; color: #555; text-align: justify;">
+                        Baik dalam bentuk tradisional maupun modern, Ulos tetap mengandung filosofi Dalihan Na Tolu - sistem kekerabatan Batak yang menjadi jiwa dari setiap helai kain. Nilai-nilai penghormatan, persatuan, dan penghargaan terhadap leluhur tetap hidup dalam setiap motif.
+                    </p>
+                </div>
+                <img src="hh.jpg" alt="Harmoni Ulos" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+            <div class="col-md-6 animate-fade-right">
+                <div style="margin-bottom: 40px;">
+                    <h3 style="font-size: 2.2rem; color: #ff8680; margin-bottom: 20px;">⋆ Inovasi yang Diperlukan</h3>
+                    <p style="font-size: 1.8rem; line-height: 1.9; color: #555; text-align: justify;">
+                        Perkembangan Ulos modern adalah jawaban atas tantangan zaman. Dengan mempertahankan makna sakral namun dalam bentuk yang lebih praktis, Ulos tetap relevan bagi generasi muda dan dapat dinikmati oleh masyarakat global tanpa kehilangan identitas aslinya.
+                    </p>
+                </div>
+                <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <h4 style="font-size: 2rem; color: #333; margin-bottom: 20px; font-style: italic;">"Ulos bukan sekadar kain, ia adalah bahasa tanpa kata yang bercerita tentang jati diri kami."</h4>
+                    <p style="font-size: 1.6rem; color: #777; margin-bottom: 0; text-align: right;">- Pepatah Batak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center animate-fade-up" style="margin-bottom: 60px;">
+        <h3 style="font-size: 2.8rem; color: #333; margin-bottom: 40px;">Jelajahi Keindahan Ulos Bersama Kami</h3>
+        <a href="produk.php" class="btn btn-primary" style="background: #ff8680; border: none; padding: 18px 50px; font-size: 2rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(255,134,128,0.3);">LIHAT PRODUK</a>
+    </div>
+
+    <!-- Team Section -->
+    <div class="team-section animate-fade-up" style="margin-bottom: 80px;">
+        <h2 style="color: #ff8680; font-size: 3.5rem; font-weight: 600; text-align: center; margin-bottom: 60px; position: relative;">
+            <span style="background: white; padding: 0 20px; position: relative; z-index: 1;">OUR TEAM</span>
+            <span style="position: absolute; bottom: 15px; left: 0; right: 0; height: 3px; background: #ff8680; z-index: 0;"></span>
+        </h2>
+        
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="col-md-4 animate-fade-left">
+                <div class="team-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px 30px; text-align: center; height: 100%; transition: all 0.3s ease; border-top: 5px solid #ff8680;">
+                    <div class="team-avatar" style="width: 150px; height: 150px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #ffd6d4; box-shadow: 0 5px 15px rgba(255,134,128,0.3);">
+                        <img src="ki1.jpg" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: #333; font-size: 2.4rem; font-weight: 700; margin-bottom: 10px;">Riski Manurung</h3>
+                    <p style="color: #ff8680; font-size: 1.6rem; font-weight: 500; margin-bottom: 20px;">Project Manager</p>
+                    <div class="team-contact" style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 10px;">
+                            <i class="fas fa-envelope" style="color: #ff8680; margin-right: 8px; width: 16px; text-align: center;"></i> riskiroha24@gmail.com
+                        </p>
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 0;">
+                            <i class="fas fa-phone" style="color: #ff8680; margin-right: 8px; width: 16px; text-align: center;"></i> +62 822 7260 4189
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="col-md-4 animate-fade-up">
+                <div class="team-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px 30px; text-align: center; height: 100%; transition: all 0.3s ease; border-top: 5px solid #ff8f80;">
+                    <div class="team-avatar" style="width: 150px; height: 150px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #ffd6d4; box-shadow: 0 5px 15px rgba(255,134,128,0.3);">
+                        <img src="dor3.png" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: #333; font-size: 2.4rem; font-weight: 700; margin-bottom: 10px;">Dora Sianipar</h3>
+                    <p style="color: #ff8f80; font-size: 1.6rem; font-weight: 500; margin-bottom: 20px;">Anggota</p>
+                    <div class="team-contact" style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 10px;">
+                            <i class="fas fa-envelope" style="color: #ff8f80; margin-right: 8px; width: 16px; text-align: center;"></i> dorasianipar13@gmail.com
+                        </p>
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 0;">
+                            <i class="fas fa-phone" style="color: #ff8880; margin-right: 8px; width: 16px; text-align: center;"></i> +62 812 6484 6202
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="col-md-4 animate-fade-right">
+                <div class="team-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px 30px; text-align: center; height: 100%; transition: all 0.3s ease; border-top: 5px solid #ff8680;">
+                    <div class="team-avatar" style="width: 150px; height: 150px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #ffd6d4; box-shadow: 0 5px 15px rgba(255,134,128,0.3);">
+                        <img src="pal2.png" alt="Team Member" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3 style="font-family: 'Playfair Display', serif; color: #333; font-size: 2.4rem; font-weight: 700; margin-bottom: 10px;">Tumpal Siahaan</h3>
+                    <p style="color: #ff8680; font-size: 1.6rem; font-weight: 500; margin-bottom: 20px;">Anggota</p>
+                    <div class="team-contact" style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 10px;">
+                            <i class="fas fa-envelope" style="color: #ff8680; margin-right: 8px; width: 16px; text-align: center;"></i> tumpalsiahaan@gmail.com
+                        </p>
+                        <p style="font-size: 1.5rem; color: #666; margin-bottom: 0;">
+                            <i class="fas fa-phone" style="color: #ff8680; margin-right: 8px; width: 16px; text-align: center;"></i> +62 822 7726 5710
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="location-section animate-fade-up" style="margin-bottom: 80px;">
+        <h2 style="color: #ff8680; font-size: 3.5rem; font-weight: 600; text-align: center; margin-bottom: 60px; position: relative;">
+            <span style="background: white; padding: 0 20px; position: relative; z-index: 1;">OUR LOCATION</span>
+            <span style="position: absolute; bottom: 15px; left: 0; right: 0; height: 3px; background: #ff8680; z-index: 0;"></span>
+        </h2>
+        
+        <div class="row">
+            <div class="col-md-5 animate-fade-left">
+                <div style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px; height: 100%;">
+                    <h3 style="font-family: 'Playfair Display', serif; color: #333; font-size: 2.6rem; font-weight: 700; margin-bottom: 25px;">Temui Kami Lebih Lanjut</h3>
+                    <div class="address-info" style="margin-bottom: 25px;">
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 5px;">
+                            <i class="fas fa-map-marker-alt" style="color: #ff8680; margin-right: 12px; width: 20px; text-align: center;"></i> 
+                            Jl. Balige No.88, Gasa Ribu
+                        </p>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 5px; padding-left: 32px;">
+                        Kec. Laguboti, Toba
+                        </p>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 5px; padding-left: 32px;">
+                        Sumatera Utara
+                        </p>
+                    </div>
+                    <div class="contact-info">
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 5px;">
+                            <i class="fas fa-phone" style="color: #ff8680; margin-right: 12px; width: 20px; text-align: center;"></i> 
+                            +62 822 7260 4189
+                        </p>
+                        <p style="font-size: 1.8rem; line-height: 1.8; color: #555; margin-bottom: 25px;">
+                            <i class="fas fa-envelope" style="color: #ff8680; margin-right: 12px; width: 20px; text-align: center;"></i> 
+                            @informasiulos.com
+                        </p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/onAQ5huFQ9TnBNSS7" target="_blank" class="btn btn-primary" style="background: linear-gradient(to right, #ff8680, #e6736d); border: none; padding: 15px 25px; font-size: 1.6rem; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(255,134,128,0.3); display: inline-block; transition: all 0.3s ease;">
+                        <i class="fas fa-directions" style="margin-right: 8px;"></i> PETUNJUK ARAH
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-7 animate-fade-right">
+
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); height: 400px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d393.1305548700206!2d99.14031807462129!3d2.3691852497761996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e010054d43183%3A0x7776d2b1b309bf1e!2sLembaga%20Pelatihan%20dan%20Penerapan%20Teknologi!5e0!3m2!1sid!2sid!4v1747238174133!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    
+    /* Efek animasi untuk halaman about */
+    .animate-fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+    
+    .animate-fade-right {
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.8s ease-out;
+    }
+    
+    .animate-fade-left {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.8s ease-out;
+    }
+    
+    .animate-fade {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+    
+    .animate-delay-1 {
+        transition-delay: 0.1s;
+    }
+    
+    .animate-delay-2 {
+        transition-delay: 0.3s;
+    }
+    
+    .animate-delay-3 {
+        transition-delay: 0.5s;
+    }
+    
+    .animate-delay-4 {
+        transition-delay: 0.7s;
+    }
+    
+    .animate-delay-5 {
+        transition-delay: 0.9s;
+    }
+    
+    .animated {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+    .comparison-card h3 {
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    .comparison-card h3:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80px;
+        height: 4px;
+    }
+    
+    .comparison-card:nth-child(1) h3:after {
+        background: #5cb85c;
+    }
+    
+    .comparison-card:nth-child(2) h3:after {
+        background: #ff8680;
+    }
+    
+    @media (max-width: 992px) {
+        .about-hero h1 {)
+            font-size: 4rem !important;
+        }
+        
+        .about-hero p {
+            font-size: 2rem !important;
+        }
+        
+        h2 {
+            font-size: 3rem !important;
+        }
+        
+        h3 {
+            font-size: 2.5rem !important;
+        }
+        
+        p, li {
+            font-size: 1.7rem !important;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .about-hero {
+            padding: 120px 0 !important;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem !important;
+        }
+        
+        .comparison-card {
+            padding: 40px !important;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .about-hero h1 {
+            font-size: 3rem !important;
+        }
+        
+        .about-hero p {
+            font-size: 1.8rem !important;
+        }
+        
+        .harmony-section, .comparison-card {
+            padding: 40px !important;
+        }
+        
+        .btn-primary {
+            font-size: 1.8rem !important;
+            padding: 15px 40px !important;
+        }
+    }
+</style>
+
+<script>
+// Fungsi untuk menambahkan kelas 'animated' ke elemen-elemen yang terlihat
+function checkIfInView() {
+    const elements = document.querySelectorAll('.animate-fade-up, .animate-fade-right, .animate-fade-left, .animate-fade');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const isVisible = elementTop < window.innerHeight - 50 && elementBottom >= 0;
+        
+        if (isVisible) {
+            element.classList.add('animated');
+        }
+    });
+}
+
+// Initialize animation on load
+document.addEventListener('DOMContentLoaded', function() {
+    // Trigger initial check
+    setTimeout(checkIfInView, 100);
+    
+    // Check when scrolling
+    window.addEventListener('scroll', checkIfInView);
+    window.addEventListener('resize', checkIfInView);
+});
+</script>
+
+<?php 
+include 'footer.php';
+?>
