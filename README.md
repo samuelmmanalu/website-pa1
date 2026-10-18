@@ -1,4 +1,3 @@
-# Toko Online Roti
-Project Toko Online Roti Lengkap dengan proses manufacturing
+Kolose 3:23
 
-UNTUK MASUK HALAMAN ADMIN SILAHKAN MASUK DENGAN MENAMBAHKAN /admin di akhir URL
+"Apa pun juga yang kamu perbuat, perbuatlah dengan segenap hatimu seperti untuk Tuhan dan bukan untuk manusia."
